@@ -1,0 +1,7 @@
+*.csv
+*.png
+.idea
+*.ipynb
+bin
+.DS_Store
+*.iml
