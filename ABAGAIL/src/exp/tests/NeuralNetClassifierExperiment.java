@@ -132,12 +132,12 @@ public class NeuralNetClassifierExperiment {
                     mets[j].printResults();
                 }
             }
-
-            try {
-                writeStringToCSV("../nn_training_log" + iter + ".csv", csvResults);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+// Uncommen this try catch if you wish to output logs as a csv
+//            try {
+//                writeStringToCSV("../nn_training_log" + iter + ".csv", csvResults);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
         }
     }
 

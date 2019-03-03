@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3503defc-42f7-4ecd-909b-4c2053da56ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,19 +15,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ABAGAIL/src/opt/RandomizedHillClimbing.java">
+        <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyTravelingSalesmanTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="22">
+              <caret line="48" column="61" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyTravelingSalesmanTest.java">
+        <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="48" column="61" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="61" />
+            <state relative-caret-position="185">
+              <caret line="134" column="62" selection-start-line="134" selection-start-column="62" selection-end-line="134" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="376">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -149,7 +151,6 @@
         <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetworkEvaluationFunctionRecall.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/opt/OptimizationAlgorithm.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyRandomizedHillClimbing.java" />
-        <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/opt/RandomizedHillClimbing.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/shared/FixedIterationTrainer.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyFourPeaksTest.java" />
@@ -158,6 +159,7 @@
         <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyKnapsackTest.java" />
         <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyTravelingSalesmanTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -179,6 +181,24 @@
             <path>
               <item name="ml_randomized_optimization" type="b2602c69:ProjectViewProjectNode" />
               <item name="ml_randomized_optimization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ml_randomized_optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ml_randomized_optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="ABAGAIL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ml_randomized_optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ml_randomized_optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="ABAGAIL" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ml_randomized_optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ml_randomized_optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="ABAGAIL" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -508,16 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="117" column="16" lean-forward="true" selection-start-line="117" selection-start-column="16" selection-end-line="118" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ABAGAIL/src/opt/ga/NQueensFitnessFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1084">
@@ -581,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyTravelingSalesmanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="61" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ABAGAIL/src/opt/example/TravelingSalesmanCrossOver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -643,10 +646,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/MyTravelingSalesmanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="48" column="61" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ABAGAIL/src/exp/tests/NeuralNetClassifierExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="134" column="62" selection-start-line="134" selection-start-column="62" selection-end-line="134" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="376">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
         </state>
       </provider>
     </entry>
