@@ -1,6 +1,6 @@
 *.csv
 *.png
-.idea
+.idea/
 *.ipynb
 bin
 .DS_Store
