@@ -10,9 +10,12 @@ import opt.prob.GenericProbabilisticOptimizationProblem;
 import opt.prob.MIMIC;
 import opt.prob.ProbabilisticOptimizationProblem;
 import shared.FixedIterationTrainer;
+import shared.Instance;
+import util.linalg.Vector;
 
 import java.util.Arrays;
 import java.util.Random;
+
 
 /**
  * A test of the knapsack problem
@@ -55,7 +58,6 @@ public class MyKnapsackTest {
         }
         int[] ranges = new int[NUM_ITEMS];
         Arrays.fill(ranges, COPIES_EACH + 1);
-
         EvaluationFunction ef = new KnapsackEvaluationFunction(values, weights, MAX_KNAPSACK_WEIGHT, copies);
         Distribution odd = new DiscreteUniformDistribution(ranges);
         NeighborFunction nf = new DiscreteChangeOneNeighbor(ranges);
@@ -68,25 +70,62 @@ public class MyKnapsackTest {
         GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
         ProbabilisticOptimizationProblem pop = new GenericProbabilisticOptimizationProblem(ef, odd, df);
         
-        RandomizedHillClimbing rhc = new RandomizedHillClimbing(hcp);      
-        FixedIterationTrainer fit = new FixedIterationTrainer(rhc, 200000);
+        RandomizedHillClimbing rhc = new RandomizedHillClimbing(hcp);
+        int iter = 200000;
+        FixedIterationTrainer fit = new FixedIterationTrainer(rhc, iter);
+        Long start = System.nanoTime();
         fit.train();
-        System.out.println(ef.value(rhc.getOptimal()));
-        
+        Long end = System.nanoTime();
+        Double testingTime = new Double(end - start);
+        testingTime /= Math.pow(10, 9);
+        double optWeight = getOptimalWeight(rhc.getOptimal(), weights);
+        System.out.println("RHC Optimal Value: " + ef.value(rhc.getOptimal()) + " Optimal Weight: " + optWeight + " IterPerSec: " + iter/testingTime );
+
+
         SimulatedAnnealing sa = new SimulatedAnnealing(100, .95, hcp);
-        fit = new FixedIterationTrainer(sa, 200000);
+        iter = 200000;
+        fit = new FixedIterationTrainer(sa, iter);
+        start = System.nanoTime();
         fit.train();
-        System.out.println(ef.value(sa.getOptimal()));
-        
+        end = System.nanoTime();
+        testingTime = new Double(end - start);
+        testingTime /= Math.pow(10, 9);
+        optWeight = getOptimalWeight(sa.getOptimal(), weights);
+        System.out.println("SA Optimal Value: " + ef.value(sa.getOptimal()) + " Optimal Weight: " + optWeight+" IterPerSec: " + iter/testingTime );
+
+
         StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(200, 150, 25, gap);
-        fit = new FixedIterationTrainer(ga, 1000);
+        iter = 200000;
+        fit = new FixedIterationTrainer(ga, iter);
+        start = System.nanoTime();
         fit.train();
-        System.out.println(ef.value(ga.getOptimal()));
-        
+        end = System.nanoTime();
+        testingTime = new Double(end - start);
+        testingTime /= Math.pow(10, 9);
+        optWeight = getOptimalWeight(ga.getOptimal(), weights);
+        System.out.println("GA Optimal Value: " + ef.value(ga.getOptimal()) + " Optimal Weight: " + optWeight+" IterPerSec: " + iter/testingTime );
+
         MIMIC mimic = new MIMIC(200, 100, pop);
-        fit = new FixedIterationTrainer(mimic, 1000);
+        iter = 2000;
+        fit = new FixedIterationTrainer(mimic, iter);
+        start = System.nanoTime();
         fit.train();
-        System.out.println(ef.value(mimic.getOptimal()));
+        end = System.nanoTime();
+        testingTime = new Double(end - start);
+        testingTime /= Math.pow(10, 9);
+        optWeight = getOptimalWeight(mimic.getOptimal(), weights);
+        System.out.println("MIMC Optimal Value: " + ef.value(mimic.getOptimal()) + " Optimal Weight: " + optWeight+" IterPerSec: " + iter/testingTime );
+    }
+
+    private static double getOptimalWeight(Instance counts, double[] weights){
+        Vector countsVec = counts.getData();
+        double weight = 0;
+        for(int i=0; i<countsVec.size(); i++){
+            double c = countsVec.get(i);
+            weight += c*weights[i];
+        }
+
+        return weight;
     }
 
 }
